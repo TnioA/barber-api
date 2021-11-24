@@ -1,1 +1,1 @@
-web: python App.py
+web: npm start
