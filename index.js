@@ -132,5 +132,5 @@ app.get('/api/getbarber', validateToken, (req, res) => {
 });
 
 
-
-app.listen(5000, () => console.log('Express started at http://localhost:5000'));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log('Express started at http://localhost:' + port));
