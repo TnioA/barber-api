@@ -36,6 +36,15 @@ def SignUp():
 
     return jsonify(response)
 
+@app.route('/api/logout', methods=['POST'])
+def Logout():
+    response = {}   
+    response['success'] = True
+    response['data'] = None
+    response['error'] = None
+
+    return jsonify(response)
+
 @app.route('/api/getbarbers', methods=['GET'])
 def GetBarbers():
     response = {}   
