@@ -19,6 +19,5 @@ app.get('/bosta', (req, res) => {
   return res.json({ data });
 });
 
-
-
-app.listen(5000, () => console.log('Express started at http://localhost:5000'));
+const port = app.get('port');
+app.listen(port, () => console.log(`Express started at port ${port}`));
