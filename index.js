@@ -60,11 +60,11 @@ app.post('/api/logout', ValidateToken, (req, res) => {
     return res.json({ success: true, data: null, error: null });
 });
 
-app.get('/api/getbarbers', ValidateToken, (req, res) => {
+app.get('/api/getbarbers', (req, res) => {
     return res.json({ success: true, data: { barbers: data.barbers, location: 'São Paulo'}, error: null });
 });
 
-app.get('/api/getbarber', ValidateToken, (req, res) => {
+app.get('/api/getbarber', (req, res) => {
     var response = [];
     data.barbers.map(x=> {
         if(x.id === parseInt(req.query.id))
