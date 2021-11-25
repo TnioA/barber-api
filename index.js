@@ -41,14 +41,12 @@ app.post('/api/signin', (req, res) => {
         if(x.email === req.body.email.toString() && x.password === req.body.password.toString())
             response.push(x);
     });
-
     
     if(response.length === 0)
         return res.json({ success: false, data: null, error: 'Usuário não encontrado.' });
 
-
     var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '1m'});
-    return res.json({ success: true, data: { token: token}, error: null });
+    return res.json({ success: true, data: { token: token, avatar: response[0].avatar }, error: null });
 });
 
 app.post('/api/signup', (req, res) => {

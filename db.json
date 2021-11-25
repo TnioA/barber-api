@@ -3,7 +3,8 @@
         {
             "name": "Test User",
             "email": "hortanio@hotmail.com",
-            "password": "123"
+            "password": "123",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd7SeoDA2PxCcdbtBxBAHYw1xiP_CpXmRFyKSyyiC2Pr_A_vf34p816fwajWCCR9eHBo&usqp=CAU"
         }
     ],
     "barbers": [
