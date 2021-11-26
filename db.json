@@ -38,7 +38,24 @@
                 }
             ],
             "testimonials": [
-
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
             ]
         },
         { 
@@ -70,7 +87,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         },
         { 
             "id": 3, 
@@ -101,7 +137,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         },
         { 
             "id": 4, 
@@ -132,7 +187,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         },
         { 
             "id": 5, 
@@ -163,7 +237,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         },
         { 
             "id": 6, 
@@ -194,7 +287,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         },
         { 
             "id": 7, 
@@ -225,7 +337,26 @@
                     "price": 14.99
                 }
             ],
-            "testimonials": []
+            "testimonials": [
+                {
+                    "id": 1,
+                    "name": "Jurema da Silva",
+                    "rate": 4.5,
+                    "body": "Eu pintei e gostei muito viu, ele se garante nos corte e pintura."
+                },
+                {
+                    "id": 2,
+                    "name": "Altolfo Oliveira Azevedo",
+                    "rate": 3.5,
+                    "body": "Não gostei da demora pra ser atendido, talvez eu volte"
+                },
+                {
+                    "id": 3,
+                    "name": "Riquelme Pereira Coelho",
+                    "rate": 5,
+                    "body": "Gostei muito, tinha muita gente na frente, mas quando fui atendido vi que era um excelente trabalho, indico."
+                }
+            ]
         }
     ]
 }
