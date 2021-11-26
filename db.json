@@ -14,7 +14,68 @@
             "name": "Paulo Sérgio Cortes",
             "stars": 4.5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -64,7 +125,68 @@
             "name": "Arthur Barbearia",
             "stars": 1.5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -114,7 +236,68 @@
             "name": "Barber Shop Marcos",
             "stars": 2.5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -164,7 +347,68 @@
             "name": "Pedro Cabelereiro",
             "stars": 5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -214,7 +458,68 @@
             "name": "Cortes do Edu",
             "stars": 4.5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -264,7 +569,68 @@
             "name": "Shoping do Cabelo",
             "stars": 3,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
@@ -314,7 +680,68 @@
             "name": "Kaio Pedro Barber",
             "stars": 4.5,
             "favorited": false,
-            "available": [],
+            "available": [
+                {
+                    "date": "2020-08-01",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-02",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-03",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-04",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                },
+                {
+                    "date": "2020-08-05",
+                    "hours": [
+                        "09:00",
+                        "09:30",
+                        "10:00",
+                        "10:30",
+                        "11:00",
+                        "11:30",
+                        "12:00"
+                    ]
+                }
+            ],
             "photos": [
                 {"url": "https://st2.depositphotos.com/2931363/9695/i/600/depositphotos_96952028-stock-photo-young-handsome-man-in-barbershop.jpg"},
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
