@@ -4,7 +4,7 @@
             "name": "Test User",
             "email": "hortanio@hotmail.com",
             "password": "123",
-            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAd7SeoDA2PxCcdbtBxBAHYw1xiP_CpXmRFyKSyyiC2Pr_A_vf34p816fwajWCCR9eHBo&usqp=CAU"
+            "avatar": "http://s2.glbimg.com/JZjxkHAxVBLYBJjHjBmueetqvBw=/top/smart/e.glbimg.com/og/ed/f/original/2015/10/09/zarch-miko-plus-size.jpg"
         }
     ],
     "barbers": [
@@ -20,8 +20,26 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
-            "testimonials": []
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
+            "testimonials": [
+
+            ]
         },
         { 
             "id": 2, 
@@ -35,7 +53,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         },
         { 
@@ -50,7 +84,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         },
         { 
@@ -65,7 +115,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         },
         { 
@@ -80,7 +146,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         },
         { 
@@ -95,7 +177,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         },
         { 
@@ -110,7 +208,23 @@
                 {"url": "https://st2.depositphotos.com/1001951/7898/i/600/depositphotos_78989850-stock-photo-hairstylist-washing-clients-hair-in.jpg"},
                 {"url": "https://st2.depositphotos.com/2931363/10694/i/600/depositphotos_106949904-stock-photo-young-bearded-man-with-hairdresser.jpg"}
             ],
-            "services": [],
+            "services": [
+                {
+                    "id": 1,
+                    "name": "Corte de cabelo",
+                    "price": 24.99
+                },
+                {
+                    "id": 2,
+                    "name": "Corte de sobrancelhas",
+                    "price": 9.99
+                },
+                {
+                    "id": 3,
+                    "name": "Pintura de cabelo",
+                    "price": 14.99
+                }
+            ],
             "testimonials": []
         }
     ]
