@@ -4,7 +4,89 @@
             "name": "Test User",
             "email": "hortanio@hotmail.com",
             "password": "123",
-            "avatar": "http://s2.glbimg.com/JZjxkHAxVBLYBJjHjBmueetqvBw=/top/smart/e.glbimg.com/og/ed/f/original/2015/10/09/zarch-miko-plus-size.jpg"
+            "avatar": "http://s2.glbimg.com/JZjxkHAxVBLYBJjHjBmueetqvBw=/top/smart/e.glbimg.com/og/ed/f/original/2015/10/09/zarch-miko-plus-size.jpg",
+            "appointments": [
+              {
+                "barber": {
+                  "id": 1, 
+                  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uEJ9D0Lqj_7P_hh8s1wXvk7LBez6bj-YJmtXhWZsVZsBlINYXBXAROeVIMJyO936T48&usqp=CAU",
+                  "name": "Paulo Sérgio Cortes"
+                },
+                "service": {
+                  "id": 1,
+                  "name": "Corte de cabelo",
+                  "price": 24.99
+                },
+                "date": {
+                  "date": "2021-11-01",
+                  "hour": "09:30"
+                }
+              },
+              {
+                "barber": {
+                  "id": 1, 
+                  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uEJ9D0Lqj_7P_hh8s1wXvk7LBez6bj-YJmtXhWZsVZsBlINYXBXAROeVIMJyO936T48&usqp=CAU",
+                  "name": "Paulo Sérgio Cortes"
+                },
+                "service": {
+                  "id": 3,
+                  "name": "Pintura de cabelo",
+                  "price": 14.99
+                },
+                "date": {
+                  "date": "2021-11-01",
+                  "hour": "12:30"
+                }
+              },
+              {
+                "barber": {
+                  "id": 1, 
+                  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uEJ9D0Lqj_7P_hh8s1wXvk7LBez6bj-YJmtXhWZsVZsBlINYXBXAROeVIMJyO936T48&usqp=CAU",
+                  "name": "Paulo Sérgio Cortes"
+                },
+                "service": {
+                  "id": 1,
+                  "name": "Corte de cabelo",
+                  "price": 24.99
+                },
+                "date": {
+                  "date": "2021-11-01",
+                  "hour": "15:00"
+                }
+              },
+              {
+                "barber": {
+                  "id": 1, 
+                  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uEJ9D0Lqj_7P_hh8s1wXvk7LBez6bj-YJmtXhWZsVZsBlINYXBXAROeVIMJyO936T48&usqp=CAU",
+                  "name": "Paulo Sérgio Cortes"
+                },
+                "service": {
+                  "id": 3,
+                  "name": "Pintura de cabelo",
+                  "price": 14.99
+                },
+                "date": {
+                  "date": "2021-11-01",
+                  "hour": "10:00"
+                }
+              },
+              {
+                "barber": {
+                  "id": 1, 
+                  "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6uEJ9D0Lqj_7P_hh8s1wXvk7LBez6bj-YJmtXhWZsVZsBlINYXBXAROeVIMJyO936T48&usqp=CAU",
+                  "name": "Paulo Sérgio Cortes"
+                },
+                "service": {
+                  "id": 1,
+                  "name": "Corte de cabelo",
+                  "price": 24.99
+                },
+                "date": {
+                  "date": "2021-11-01",
+                  "hour": "16:30"
+                }
+              }
+            ]
         }
     ],
     "barbers": [
