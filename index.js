@@ -96,9 +96,6 @@ app.get('/api/getappointments', ValidateToken, (req, res) => {
   var token = authorization.split(' ')[1];
   var user = decode(token);
 
-  if(response.length === 0)
-    return res.json({ success: false, data: null, error: 'Usuário não encontrado.' });
-
   return res.json({ success: true, data: data.users[0].appointments, error: null });
 });
 
