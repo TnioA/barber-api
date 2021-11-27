@@ -10,6 +10,14 @@ export default new class BarberController {
 
   public async GetBarber(req: Request, res: Response): Promise<Response> {
     var response: any[] = [];
+
+    if(!req.query.id)
+      return HttpHelper.Convert(res, { 
+        success: false,
+        data: null,
+        error: 'Barbeiro não encontrado.'
+      });
+
     data.barbers.map(x=> {
       if(x.id === parseInt(req.query.id.toString()))
           response.push(x);
