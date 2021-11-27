@@ -41,7 +41,7 @@
               {
                 "barber": {
                   "id": 6, 
-                  "avatar": "http://www.efetividade.blog.br/assets/images/2019/06/perfil-de-investidor-conheca-os-principais-e-descubra-o-seu-e1560966189276.jpg",
+                  "avatar": "https://static-cse.canva.com/blob/183660/Drobot-DeanCanva.jpg",
                   "name": "Shoping do Cabelo"
                 },
                 "service": {
@@ -622,7 +622,7 @@
         },
         { 
             "id": 6, 
-            "avatar": "http://www.efetividade.blog.br/assets/images/2019/06/perfil-de-investidor-conheca-os-principais-e-descubra-o-seu-e1560966189276.jpg",
+            "avatar": "https://static-cse.canva.com/blob/183660/Drobot-DeanCanva.jpg",
             "name": "Shoping do Cabelo",
             "stars": 3,
             "favorited": false,
