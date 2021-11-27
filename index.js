@@ -92,10 +92,6 @@ app.post('/api/setappointment', ValidateToken, (req, res) => {
 });
 
 app.get('/api/getappointments', ValidateToken, (req, res) => {
-  var authorization = req.headers['authorization'];
-  var token = authorization.split(' ')[1];
-  var user = decode(token);
-
   return res.json({ success: true, data: data.users[0].appointments, error: null });
 });
 
