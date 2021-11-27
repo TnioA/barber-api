@@ -91,7 +91,7 @@ app.post('/api/setappointment', ValidateToken, (req, res) => {
   return res.json({ success: true, data: null, error: null });
 });
 
-app.get('/api/getappointments', ValidateToken, (req, res) => {
+app.get('/api/getappointments', (req, res) => {
   return res.json({ success: true, data: data.users[0].appointments, error: null });
 });
 
