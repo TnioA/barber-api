@@ -47,12 +47,17 @@ app.post('/api/signin', (req, res) => {
     if(response.length === 0)
       return res.json({ success: false, data: null, error: 'Usuário não encontrado.' });
 
-    var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '30m'});
+    response[0].appointments = [];
+
+    var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '5m'});
     return res.json({ success: true, data: { token: token, avatar: response[0].avatar }, error: null });
 });
 
 app.post('/api/signup', (req, res) => {
-    var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '30m'});
+    var user = data.users[0];
+    user.appointments = [];
+    var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '5m'});
+
     return res.json({ success: true, data: { token: token}, error: null });
 });
 
