@@ -20,6 +20,6 @@ export default new class AuthExtension {
   }
 
   public GenerateToken(data: any) {
-    return sign({data: data}, process.env.JWT_PRIVATE_KEY, {expiresIn : '5m'});
+    return sign({data: data}, process.env.JWT_PRIVATE_KEY, {expiresIn : '15m'});
   }
 }
