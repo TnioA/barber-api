@@ -1,4 +1,4 @@
-const app = require('./config/express')();
+const app = require('./App/App.js')();
 const port = app.get('port');
 
 // RODANDO NOSSA APLICAÇÃO NA PORTA SETADA

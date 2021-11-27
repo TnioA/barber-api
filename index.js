@@ -30,7 +30,7 @@ app.post('/api/checktoken', ValidateToken, (req, res) => {
     var token = authorization.split(' ')[1];
     var user = decode(token);
 
-    return res.json({ success: true, data: { token: token, avatar: user.data.avatar}, error: null });
+    return res.status(200).json({ success: true, data: { token: token, avatar: user.data.avatar}, error: null });
 });
 
 app.post('/api/signin', (req, res) => {
@@ -45,12 +45,12 @@ app.post('/api/signin', (req, res) => {
     });
     
     if(response.length === 0)
-      return res.json({ success: false, data: null, error: 'Usuário não encontrado.' });
+      return res.status(400).json({ success: false, data: null, error: 'Usuário não encontrado.' });
 
     response[0].appointments = [];
 
     var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '5m'});
-    return res.json({ success: true, data: { token: token, avatar: response[0].avatar }, error: null });
+    return res.status(200).json({ success: true, data: { token: token, avatar: response[0].avatar }, error: null });
 });
 
 app.post('/api/signup', (req, res) => {
@@ -58,7 +58,7 @@ app.post('/api/signup', (req, res) => {
     user.appointments = [];
     var token = sign({data: data.users[0]}, JWT_PRIVATE_KEY, {expiresIn : '5m'});
 
-    return res.json({ success: true, data: { token: token}, error: null });
+    return res.status(200).json({ success: true, data: { token: token}, error: null });
 });
 
 app.post('/api/logout', ValidateToken, (req, res) => {
@@ -66,7 +66,7 @@ app.post('/api/logout', ValidateToken, (req, res) => {
 });
 
 app.get('/api/getbarbers', (req, res) => {
-    return res.json({ success: true, data: { barbers: data.barbers, location: 'São Paulo'}, error: null });
+    return res.status(200).json({ success: true, data: { barbers: data.barbers, location: 'São Paulo'}, error: null });
 });
 
 app.get('/api/getbarber', (req, res) => {
@@ -76,7 +76,7 @@ app.get('/api/getbarber', (req, res) => {
           response.push(x);
     });
     
-    return res.json({ 
+    return res.status(200).json({ 
       success: response.length > 0,
       data: response.length > 0 ? response[0] : null,
       error: response.length > 0 ? null : 'Barbeiro não encontrado.'
@@ -84,16 +84,16 @@ app.get('/api/getbarber', (req, res) => {
 });
 
 app.post('/api/favoriteBarber', ValidateToken, (req, res) => {
-  return res.json({ success: true, data: null, error: null });
+  return res.status(200).json({ success: true, data: null, error: null });
 });
 
 app.post('/api/setappointment', ValidateToken, (req, res) => {
-  return res.json({ success: true, data: null, error: null });
+  return res.status(200).json({ success: true, data: null, error: null });
 });
 
 app.get('/api/getappointments', (req, res) => {
-  return res.json({ success: true, data: data.users[0].appointments, error: null });
+  return res.status(200).json({ success: true, data: data.users[0].appointments, error: null });
 });
 
 const port = app.get('port');
-app.listen(port, () => console.log(`Express started at port ${port}`));
+app.listen(port, () => console.log(`Server started at port ${port}`));
