@@ -13,7 +13,7 @@ export default new class BarberController {
     }
 
     public async GetBarber(req: Request, res: Response): Promise<Response> {
-        return HttpHelper.Convert(res, await BarberService.GetBarber(req));
+        return HttpHelper.Convert(res, await BarberService.GetBarber(req, AuthExtension.DecodeToken(req.headers['authorization'])));
     }
 
     public async FavoriteBarber(req: Request, res: Response): Promise<Response> {

@@ -26,9 +26,13 @@ export default new class BarberService {
         return { success: true, data: response, error: null };
     }
 
-    public async GetBarber(request: any): Promise<any> {
+    public async GetBarber(request: any, user: any): Promise<any> {
         if (!request.query.id)
             return { success: false, data: null, error: 'Identificador do Barbeiro não foi informado.' };
+
+        var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
+        if (userInDb === null)
+            return { success: false, data: null, error: 'Usuário não encontrado.' };
 
         var barber = await this.firebaseRepository.getFirstById('barbers', request.query.id);
         if (barber === null)
@@ -66,19 +70,25 @@ export default new class BarberService {
         }
 
         barber.available = available;
+        barber.favorited = userInDb.favoriteds.filter((x: any)=> x === barber.id).length > 0;
         return { success: true, data: barber, error: null };
     }
 
     public async FavoriteBarber(request: any, user: any): Promise<any> {
-        if (!request.body.barberId)
-            return { success: false, data: null, error: 'Identificador do Barbeiro não foi informado.' };
+        if (!request.body.barberId || !request.body.state)
+            return { success: false, data: null, error: 'Identificador do Barbeiro ou estado não foi informado.' };
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
             return { success: false, data: null, error: 'Usuário não encontrado.' };
 
         userInDb.favoriteds = !userInDb.favoriteds ? [] : userInDb.favoriteds;
-        userInDb.favoriteds.push(request.body.barberId);
+        
+        if(request.body.state){
+            userInDb.favoriteds.push(request.body.barberId);
+        }else{
+            userInDb.favoriteds = userInDb.favoriteds.filter((x: any)=> x !== request.body.barberId);
+        }
 
         var response = await this.firebaseRepository.update('users', userInDb);
         if (!response)
