@@ -75,7 +75,7 @@ export default new class BarberService {
     }
 
     public async FavoriteBarber(request: any, user: any): Promise<any> {
-        if (!request.body.barberId || !request.body.state)
+        if (!request.body.barberId || request.body.state === undefined)
             return { success: false, data: null, error: 'Identificador do Barbeiro ou estado não foi informado.' };
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
