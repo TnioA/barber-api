@@ -32,11 +32,14 @@ export default new class AppointmentService {
         if(!service)
             return { success: false, data: null, error: 'Serviço não encontrado.' };
 
+
+        var month = request.body.month < 10 ? `0${request.body.month}` : request.body.month;
+        var day = request.body.day < 10 ? `0${request.body.day}` : request.body.day;
         var appointment = {
             userId: userInDb.id,
             barber: { id: request.body.barberId, name: barberInDb.name, avatar: barberInDb.avatar },
             service: { id: request.body.serviceId, name: service.name, price: service.price },
-            date: { date: `${request.body.year}-${request.body.month}-${request.body.day}`, hour: request.body.hour },
+            date: { date: `${request.body.year}-${month}-${day}`, hour: request.body.hour },
             active: true
         }
 
