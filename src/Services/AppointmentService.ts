@@ -36,7 +36,7 @@ export default new class AppointmentService {
             userId: userInDb.id,
             barber: { id: request.body.barberId, name: barberInDb.name, avatar: barberInDb.avatar },
             service: { id: request.body.serviceId, name: service.name, price: service.price },
-            date: { date: request.body.date, hour: request.body.hour },
+            date: { date: `${request.body.year}-${request.body.month}-${request.body.day}`, hour: request.body.hour },
             active: true
         }
 
