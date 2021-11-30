@@ -13,7 +13,7 @@ export default new class UserService {
 		var authorization = request.headers['authorization'];
 		var token = authorization.split(' ')[1];
 
-		return { success: true, data: { token: token, avatar: user.data.avatar }, error: null };
+		return { success: true, data: { token: token, avatar: user.avatar }, error: null };
 	}
 
 	public async SignIn(request: any): Promise<any> {
