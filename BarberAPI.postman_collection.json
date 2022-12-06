@@ -290,7 +290,7 @@
 	"variable": [
 		{
 			"key": "api-url",
-			"value": "http://localhost:5000/api",
+			"value": "http://localhost:5000/api\nhttps://barber-api-9hiu.onrender.com/api",
 			"type": "default"
 		},
 		{
