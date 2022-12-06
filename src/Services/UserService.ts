@@ -1,28 +1,30 @@
 import { decode } from 'jsonwebtoken';
 import AuthExtension from '../Extensions/AuthExtension';
 import { FirebaseRepository } from '../Repositories/FirebaseRepository';
+import BaseService from './BaseService';
 
-export default new class UserService {
+export default new class UserService extends BaseService {
     private readonly firebaseRepository: FirebaseRepository;
 
     constructor() {
+		super();
         this.firebaseRepository = new FirebaseRepository();
     }
 
 	public async CheckToken(request: any, user: any): Promise<any> {
 		var authorization = request.headers['authorization'];
-		var token = authorization.split(' ')[1];
+		var token = authorization.replace('Bearer ', '').replace('bearer ', '');
 
-		return { success: true, data: { token: token, avatar: user.avatar }, error: null };
+		return this.SuccessData({ token: token, avatar: user.avatar });
 	}
 
 	public async SignIn(request: any): Promise<any> {
 		if (!request.body.email || !request.body.password)
-			return { success: false, data: null, error: 'Email e/ou senha não informados.' };
+			return this.ErrorData('Email e/ou senha não informados.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', {column: 'email', operator: '==', value: request.body.email});
         if(userInDb === null || userInDb.password !== request.body.password)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
 
 		var token = AuthExtension.GenerateToken({
 			name: userInDb.name,
@@ -30,7 +32,7 @@ export default new class UserService {
 			avatar: userInDb.avatar
 		});
 
-		return { success: true, data: { token: token, avatar: userInDb.avatar }, error: null };
+		return this.SuccessData({ token: token, avatar: userInDb.avatar });
 	}
 
 	public async SignUp(request: any): Promise<any> {
@@ -43,7 +45,7 @@ export default new class UserService {
 
         var response = await this.firebaseRepository.add('users', user);
         if(!response)
-            return { success: false, data: null, error: 'Erro ao inserir dados' };
+            return this.ErrorData('Erro ao inserir dados');
 
 		var token = AuthExtension.GenerateToken({
 			name: request.body.name,
@@ -51,10 +53,10 @@ export default new class UserService {
 			avatar: request.body.avatar
 		});
 
-		return { success: true, data: { token: token, avatar: request.body.avatar }, error: null };
+		return this.SuccessData({ token: token, avatar: request.body.avatar });
 	}
 
 	public async Logout(request: any): Promise<any> {
-		return { success: true, data: null, error: null };
+		return this.SuccessData();
 	}
 }

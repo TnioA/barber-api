@@ -1,40 +1,45 @@
 import { FirebaseRepository } from '../Repositories/FirebaseRepository';
-import { decode } from 'jsonwebtoken';
+import BaseService from './BaseService';
 
-export default new class AppointmentService {
+export default new class AppointmentService extends BaseService {
 
     private readonly firebaseRepository: FirebaseRepository;
 
     constructor() {
+        super();
         this.firebaseRepository = new FirebaseRepository();
     }
 
-    public async GetAppointments(request: any, user: any): Promise<any> {
+    public async GetAppointments(user: any): Promise<any> {
         var userInDb = await this.firebaseRepository.getFirst('users', {column: 'email', operator: '==', value: user.email});
         if(userInDb === null)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
 
         var response = await this.firebaseRepository.getAll('appointments', { column: 'userId', operator: '==', value: userInDb.id});
         
-        return { success: true, data: response, error: null };
+        return this.SuccessData(response);
     }
 
     public async SetAppointment(request: any, user: any): Promise<any> {
+        if (!request.body.barberId || !request.body.serviceId || !request.body.day || 
+            !request.body.month || !request.body.year || !request.body.hour)
+            return this.ErrorData('Um ou mais dados para requisição não foram informados.');
+
         var userInDb = await this.firebaseRepository.getFirst('users', {column: 'email', operator: '==', value: user.email});
         if(userInDb === null)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
 
         var barberInDb = await this.firebaseRepository.getFirstById('barbers', request.body.barberId);
         if(barberInDb === null)
-            return { success: false, data: null, error: 'Barbeiro não encontrado.' };
+            return this.ErrorData('Barbeiro não encontrado.');
 
         var service = barberInDb.services.find((x: any)=> x.id === request.body.serviceId);
         if(!service)
-            return { success: false, data: null, error: 'Serviço não encontrado.' };
-
+            return this.ErrorData('Serviço não encontrado.');
 
         var month = request.body.month < 10 ? `0${request.body.month}` : request.body.month;
         var day = request.body.day < 10 ? `0${request.body.day}` : request.body.day;
+        
         var appointment = {
             userId: userInDb.id,
             barber: { id: request.body.barberId, name: barberInDb.name, avatar: barberInDb.avatar },
@@ -45,8 +50,8 @@ export default new class AppointmentService {
 
         var response = await this.firebaseRepository.add('appointments', appointment);
         if(!response)
-            return { success: false, data: null, error: 'Erro ao inserir dados' };
+            return this.ErrorData('Erro ao inserir dados');
 
-        return { success: true, data: null, error: null };
+        return this.SuccessData();
     }
 }

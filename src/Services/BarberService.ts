@@ -1,46 +1,47 @@
 import { FirebaseRepository } from '../Repositories/FirebaseRepository';
-import { decode } from 'jsonwebtoken';
+import BaseService from './BaseService';
 
-export default new class BarberService {
+export default new class BarberService extends BaseService {
 
     private readonly firebaseRepository: FirebaseRepository;
 
     constructor() {
+        super();
         this.firebaseRepository = new FirebaseRepository();
     }
 
-    public async GetBarbers(request: any): Promise<any> {
+    public async GetBarbers(): Promise<any> {
         var response = await this.firebaseRepository.getAll('barbers');
-        return { success: true, data: response, error: null };
+        return this.SuccessData(response);
     }
 
-    public async GetFavoritedBarbers(request: any, user: any): Promise<any> {
+    public async GetFavoritedBarbers(user: any): Promise<any> {
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
 
         if (!userInDb.favoriteds)
-            return { success: true, data: [], error: null };
+            return this.SuccessData([]);
 
         var response = await this.firebaseRepository.getAll('barbers', { column: 'id', operator: 'in', value: userInDb.favoriteds });
-        return { success: true, data: response, error: null };
+        return this.SuccessData(response);
     }
 
     public async GetBarber(request: any, user: any): Promise<any> {
         if (!request.query.id)
-            return { success: false, data: null, error: 'Identificador do Barbeiro não foi informado.' };
+            return this.ErrorData('Identificador do Barbeiro não foi informado.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
 
         var barber = await this.firebaseRepository.getFirstById('barbers', request.query.id);
         if (barber === null)
-            return { success: false, data: null, error: 'Barbeiro não encontrado.' };
+            return this.ErrorData('Barbeiro não encontrado.');
 
         var appointments = await this.firebaseRepository.getAll('appointments', { column: 'barber.id', operator: '==', value: barber.id });
         if (appointments === null)
-            return { success: false, data: null, error: 'Barbeiro não encontrado.' };
+            return this.ErrorData('Barbeiro não encontrado.');
 
         var available = [];
         var newDate = new Date();
@@ -71,16 +72,20 @@ export default new class BarberService {
 
         barber.available = available;
         barber.favorited = userInDb.favoriteds.filter((x: any)=> x === barber.id).length > 0;
-        return { success: true, data: barber, error: null };
+        return this.SuccessData(barber);
     }
 
     public async FavoriteBarber(request: any, user: any): Promise<any> {
         if (!request.body.barberId || request.body.state === undefined)
-            return { success: false, data: null, error: 'Identificador do Barbeiro ou estado não foi informado.' };
+            return this.ErrorData('Identificador do Barbeiro ou estado não foi informado.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
-            return { success: false, data: null, error: 'Usuário não encontrado.' };
+            return this.ErrorData('Usuário não encontrado.');
+
+        var barber = await this.firebaseRepository.getFirstById('barbers', request.body.barberId);
+        if (barber === null)
+            return this.ErrorData('Barbeiro não encontrado.');
 
         userInDb.favoriteds = !userInDb.favoriteds ? [] : userInDb.favoriteds;
         
@@ -92,8 +97,8 @@ export default new class BarberService {
 
         var response = await this.firebaseRepository.update('users', userInDb);
         if (!response)
-            return { success: false, data: null, error: 'Erro ao inserir dados' };
+            return this.ErrorData('Erro ao inserir dados');
 
-        return { success: true, data: null, error: null };
+        return this.SuccessData();
     }
 }

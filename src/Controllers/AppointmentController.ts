@@ -6,7 +6,7 @@ import AppointmentService from '../Services/AppointmentService';
 export default new class AppointmentController {
 
     public async GetAppointments(req: Request, res: Response): Promise<Response> {
-        return HttpHelper.Convert(res, await AppointmentService.GetAppointments(req, AuthExtension.DecodeToken(req.headers['authorization'])));
+        return HttpHelper.Convert(res, await AppointmentService.GetAppointments(AuthExtension.DecodeToken(req.headers['authorization'])));
     }
 
     public async SetAppointment(req: Request, res: Response): Promise<Response> {

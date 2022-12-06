@@ -6,14 +6,14 @@ export default new class AuthExtension {
     public ValidateToken(req: Request, res: Response, next: NextFunction) {
         var authorization = req.headers['authorization']
         if (!authorization || !authorization.includes('Bearer '))
-            return res.status(401).json({ success: false, data: null, error: 'token não informado' });
+            return res.status(401).json({ success: false, error: 'token não informado' });
 
         var token = authorization.split(' ')[1];
         verify(token, process.env.JWT_PRIVATE_KEY, (err, decode) => {
             if (!err) {
                 next();
             } else {
-                return res.status(401).json({ success: false, data: null, error: err.name });
+                return res.status(401).json({ success: false, error: err.name });
             }
         });
     }

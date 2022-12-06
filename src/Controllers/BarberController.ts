@@ -5,11 +5,11 @@ import BarberService from '../Services/BarberService';
 
 export default new class BarberController {
     public async GetBarbers(req: Request, res: Response): Promise<Response> {
-        return HttpHelper.Convert(res, await BarberService.GetBarbers(req));
+        return HttpHelper.Convert(res, await BarberService.GetBarbers());
     }
 
     public async GetFavoritedBarbers(req: Request, res: Response): Promise<Response> {
-        return HttpHelper.Convert(res, await BarberService.GetFavoritedBarbers(req, AuthExtension.DecodeToken(req.headers['authorization'])));
+        return HttpHelper.Convert(res, await BarberService.GetFavoritedBarbers(AuthExtension.DecodeToken(req.headers['authorization'])));
     }
 
     public async GetBarber(req: Request, res: Response): Promise<Response> {

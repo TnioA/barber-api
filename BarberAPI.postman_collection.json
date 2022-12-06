@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "1c4eacdd-761b-4172-b35d-8b3abd0c7184",
+		"name": "BarberAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Barber",
+			"item": [
+				{
+					"name": "Get barbers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-url}}/getbarbers",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"getbarbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get favorited barbers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-url}}/getfavoritedBarbers",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"getfavoritedBarbers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get barber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-url}}/getbarber?id=96ZRvi5QaQp7lojhpSxG",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"getbarber"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "96ZRvi5QaQp7lojhpSxG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Favorite barber",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"barberId\": \"zqhfRAdiSIkZTzm9iajg\",\r\n    \"state\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/favoritebarber",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"favoritebarber"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Appointment",
+			"item": [
+				{
+					"name": "Get appointments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api-url}}/getappointments",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"getappointments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"barberId\": \"96ZRvi5QaQp7lojhpSxG\",\r\n    \"serviceId\": 1,\r\n    \"day\": 1,\r\n    \"month\": 12,\r\n    \"year\": 2022,\r\n    \"hour\": \"12:30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/setappointment",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"setappointment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Check token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api-url}}/checktoken",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"checktoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-in",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"tests[\"Status code is 200\"] = pm.response.to.have.status(200);\r",
+									"tests[\"check response object data\"] = jsonData.hasOwnProperty(\"data\");\r",
+									"tests[\"check response object access token\"] = jsonData.data.hasOwnProperty(\"token\");\r",
+									"pm.collectionVariables.set(\"auth-token\", jsonData.data.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hortanio@hotmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/signin",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Name example\",\r\n    \"email\": \"email@email.com\",\r\n    \"password\": \"123\",\r\n    \"avatar\": \"url-image-avatar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/signup",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Log-out",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"email@email.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-url}}/logout",
+							"host": [
+								"{{api-url}}"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{auth-token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-url",
+			"value": "http://localhost:5000/api",
+			"type": "default"
+		},
+		{
+			"key": "auth-token",
+			"value": "teste",
+			"type": "default"
+		}
+	]
+}
