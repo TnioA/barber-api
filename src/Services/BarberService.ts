@@ -2,7 +2,6 @@ import { FirebaseRepository } from '../Repositories/FirebaseRepository';
 import BaseService from './BaseService';
 
 export default new class BarberService extends BaseService {
-
     private readonly firebaseRepository: FirebaseRepository;
 
     constructor() {
@@ -71,7 +70,7 @@ export default new class BarberService extends BaseService {
         }
 
         barber.available = available;
-        barber.favorited = userInDb.favoriteds.filter((x: any)=> x === barber.id).length > 0;
+        barber.favorited = userInDb.favoriteds.filter((x: any) => x === barber.id).length > 0;
         return this.SuccessData(barber);
     }
 
@@ -88,11 +87,11 @@ export default new class BarberService extends BaseService {
             return this.ErrorData('Barbeiro não encontrado.');
 
         userInDb.favoriteds = !userInDb.favoriteds ? [] : userInDb.favoriteds;
-        
-        if(request.body.state){
+
+        if (request.body.state) {
             userInDb.favoriteds.push(request.body.barberId);
-        }else{
-            userInDb.favoriteds = userInDb.favoriteds.filter((x: any)=> x !== request.body.barberId);
+        } else {
+            userInDb.favoriteds = userInDb.favoriteds.filter((x: any) => x !== request.body.barberId);
         }
 
         var response = await this.firebaseRepository.update('users', userInDb);

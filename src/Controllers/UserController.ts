@@ -4,7 +4,6 @@ import HttpHelper from '../Helpers/HttpHelper';
 import UserService from '../Services/UserService';
 
 export default new class UserController {
-
 	public async CheckToken(req: Request, res: Response): Promise<Response> {
 		return HttpHelper.Convert(res, await UserService.CheckToken(req, AuthExtension.DecodeToken(req.headers['authorization'])));
 	}

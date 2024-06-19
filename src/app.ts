@@ -18,8 +18,8 @@ class App {
     }
 
     private Middlewares(): void {
-        this.express.use(express.json({limit: "50mb"}));
-        this.express.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+        this.express.use(express.json({ limit: "50mb" }));
+        this.express.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }));
         this.express.use(cors());
     }
 
@@ -28,7 +28,7 @@ class App {
         // Context.connection.sync({force: true});
     }
 
-    private Routes (): void {
+    private Routes(): void {
         this.express.use(router);
     }
 }
