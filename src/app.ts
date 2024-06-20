@@ -36,6 +36,11 @@ class App {
     }
 
     private async Documentation() {
+        let host = 'https://barber-api-9hiu.onrender.com';
+
+        if (this.express.get('host') === '127.0.0.1' || this.express.get('host') === 'localhost')
+            host = `http://${this.express.get('host')}:${this.express.get('port')}`;
+
         const doc = {
             info: {
                 title: "BarberApp API",
@@ -55,7 +60,7 @@ class App {
             },
             servers: [
                 {
-                    url: `http://${this.express.get('host')}:${this.express.get('port')}`,
+                    url: host,
                     description: ''
                 },
             ],

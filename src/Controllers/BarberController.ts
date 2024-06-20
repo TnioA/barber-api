@@ -33,7 +33,8 @@ export default new class BarberController {
             #swagger.parameters['id'] = {
                 in: 'query',
                 description: 'Barber identifier',
-                type: 'string'
+                type: 'string',
+                required: true
            }
            #swagger.responses[200] = { description: 'Barber details returned.' }
            #swagger.responses[401] = { description: 'Authentication error.' }
