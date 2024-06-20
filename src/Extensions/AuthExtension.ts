@@ -4,11 +4,11 @@ require('dotenv').config();
 
 export default new class AuthExtension {
     public ValidateToken(req: Request, res: Response, next: NextFunction) {
-        var authorization = req.headers['authorization']
+        var authorization = req.headers['authorization'];
         if (!authorization || !authorization.includes('Bearer '))
             return res.status(401).json({ success: false, error: 'token não informado' });
 
-        var token = authorization.split(' ')[1];
+        var token = authorization?.replace('Bearer ', '').replace('bearer ', '');
         verify(token, process.env.JWT_PRIVATE_KEY, (err, decode) => {
             if (!err) {
                 next();
@@ -23,9 +23,9 @@ export default new class AuthExtension {
     }
 
     public DecodeToken(token: string) {
-        var token = token.split(' ')[1];
+        var token = token?.replace('Bearer ', '').replace('bearer ', '');
         var user: any = decode(token);
 
-        return user.data;
+        return user?.data;
     }
 }

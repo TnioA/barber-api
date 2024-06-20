@@ -15,6 +15,9 @@ export default new class BarberService extends BaseService {
     }
 
     public async GetFavoritedBarbers(user: any): Promise<any> {
+        if (!user)
+            return this.ErrorData('Usuário não encontrado.');
+
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
             return this.ErrorData('Usuário não encontrado.');
@@ -29,6 +32,9 @@ export default new class BarberService extends BaseService {
     public async GetBarber(request: any, user: any): Promise<any> {
         if (!request.query.id)
             return this.ErrorData('Identificador do Barbeiro não foi informado.');
+    
+        if (!user)
+            return this.ErrorData('Usuário não encontrado.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
@@ -77,6 +83,9 @@ export default new class BarberService extends BaseService {
     public async FavoriteBarber(request: any, user: any): Promise<any> {
         if (!request.body.barberId || request.body.state === undefined)
             return this.ErrorData('Identificador do Barbeiro ou estado não foi informado.');
+
+        if (!user)
+            return this.ErrorData('Usuário não encontrado.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)

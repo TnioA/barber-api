@@ -10,6 +10,9 @@ export default new class AppointmentService extends BaseService {
     }
 
     public async GetAppointments(user: any): Promise<any> {
+        if (!user)
+            return this.ErrorData('Usuário não encontrado.');
+
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)
             return this.ErrorData('Usuário não encontrado.');
@@ -23,6 +26,9 @@ export default new class AppointmentService extends BaseService {
         if (!request.body.barberId || !request.body.serviceId || !request.body.day ||
             !request.body.month || !request.body.year || !request.body.hour)
             return this.ErrorData('Um ou mais dados para requisição não foram informados.');
+
+        if (!user)
+            return this.ErrorData('Usuário não encontrado.');
 
         var userInDb = await this.firebaseRepository.getFirst('users', { column: 'email', operator: '==', value: user.email });
         if (userInDb === null)

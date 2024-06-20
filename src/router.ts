@@ -7,7 +7,6 @@ import AppointmentController from './Controllers/AppointmentController';
 import AuthExtension from './Extensions/AuthExtension';
 
 const router = Router()
-
 router.post('/api/checktoken', AuthExtension.ValidateToken, UserController.CheckToken);
 router.post('/api/signin', UserController.SignIn);
 router.post('/api/signup', UserController.SignUp);
@@ -19,6 +18,6 @@ router.get('/api/getbarber', AuthExtension.ValidateToken, BarberController.GetBa
 router.post('/api/favoriteBarber', AuthExtension.ValidateToken, BarberController.FavoriteBarber);
 
 router.post('/api/setappointment', AuthExtension.ValidateToken, AppointmentController.SetAppointment);
-router.get('/api/getappointments', AppointmentController.GetAppointments);
+router.get('/api/getappointments', AuthExtension.ValidateToken, AppointmentController.GetAppointments);
 
 export default router;
