@@ -8,15 +8,41 @@ export default new class AppointmentController {
         /*
             #swagger.tags = ['appointment']
             #swagger.summary = 'Set a new appointment for the user'
-            #swagger.parameters['body'] = {
-                in: 'body',
-                schema: {
-                    $barberId: '96ZRvi5QaQp7lojhpSxG',
-                    $serviceId: 1,
-                    $day: 1,
-                    $month: 12,
-                    $year: 2022,
-                    $hour: '12:30'
+            #swagger.requestBody = {
+                required: true,
+                content: {
+                    "application/json": { 
+                        schema: {
+                            type: "object",
+                            properties: {
+                                barberId: {
+                                    type: "string",
+                                    example: "96ZRvi5QaQp7lojhpSxG"
+                                },
+                                serviceId: {
+                                    type: "number",
+                                    example: 1
+                                },
+                                day: {
+                                    type: "number",
+                                    example: 1
+                                },
+                                month: {
+                                    type: "number",
+                                    example: 12
+                                },
+                                year: {
+                                    type: "number",
+                                    example: 2022
+                                },
+                                hour: {
+                                    type: "string",
+                                    example: "12:30"
+                                }
+                            },
+                            required: ["barberId", "serviceId", "day", "month", "year", "hour"]
+                        }
+                    }
                 }
             }
             #swagger.responses[200] = { description: 'Confirmation of the appointment created.' }
