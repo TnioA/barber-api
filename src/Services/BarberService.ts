@@ -76,6 +76,11 @@ export default new class BarberService extends BaseService {
         }
 
         barber.available = available;
+        if(!userInDb.favoriteds || userInDb.favoriteds.length === 0) {
+            barber.favorited = false;
+            return this.SuccessData(barber);
+        }
+
         barber.favorited = userInDb.favoriteds.filter((x: any) => x === barber.id).length > 0;
         return this.SuccessData(barber);
     }
